@@ -22,7 +22,7 @@ persistModel ( model, cmds ) =
   model ! [ setStorage model, cmds ]
 
 
--- and can be added to the forward pipe change here
+-- and can be added to the forward pipe chain here
 updateWithMiddleware : Msg -> Model -> ( Model, Cmd Msg )
 updateWithMiddleware msg model =
   update msg model
