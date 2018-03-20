@@ -1,0 +1,36 @@
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: url('../img/einlandr.png') center center no-repeat transparent;
+}
+
+.app {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  .elmlandr-title {
+    color: lighten(#000000, 18%);
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    letter-spacing: 15px;
+    top: 50%;
+    left: 50%;
+  }
+
+  .elmlandr-input {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-top: 1px solid rgba(#000000, .18);
+    text-align: center;
+    font-size: 2em;
+    outline: none !important;
+    padding: 0.5em;
+    opacity: .5;
+    background: #eaeaea;
+  }
+}

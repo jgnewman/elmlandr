@@ -1,0 +1,2 @@
+- what about tests
+- prep elm app to handle http and websockets (maybe remove axios or whatever) (update readme)

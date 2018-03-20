@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Elmlandr</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!-- Compiled Elm app bundle -->
+    <script src="./js/app.js"></script>
+
+    <!-- Renders the Elm app fullscreen and saves state in localStorage -->
+    <script>
+      window.addEventListener('load', function () {
+        var saved = localStorage.getItem('elmlandr-app');
+        var parsed = saved ? JSON.parse(saved) : null;
+
+        var app = Elm.Main.fullscreen(parsed);
+
+        app.ports.setStorage.subscribe(function (model) {
+          localStorage.setItem('elmlandr-app', JSON.stringify(model));
+        });
+      });
+    </script>
+
+    {{{ reload }}}
+  </body>
+</html>
